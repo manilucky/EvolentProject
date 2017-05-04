@@ -1,0 +1,23 @@
+{
+  "name": "evolve-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Manimala",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.6.4",
+    "bootstrap": "^3.3.7",
+    "opn": "^5.0.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-json-srv": "^1.0.1",
+    "gulp-serve": "^1.4.0",
+    "gulp-webserver": "^0.9.1",
+    "lodash": "^4.17.4"
+  }
+}

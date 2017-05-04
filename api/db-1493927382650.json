@@ -1,0 +1,12 @@
+{
+  "Contacts": [
+    {
+      "FirstName": "John",
+      "LastName": "Kim",
+      "Email": "Johnkim@outlook.com",
+      "Status": "Active",
+      "id": 1,
+      "PhoneNumber": "(675) 896 4538"
+    }
+  ]
+}

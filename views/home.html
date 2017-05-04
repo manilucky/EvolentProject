@@ -1,0 +1,18 @@
+<h2>Welcome to Evolent Health</h2>
+<h4>List of Contacts</h4>
+<div class="jumbotron">
+  <a class="btn btn-lg btn-primary" ng-click="contactClick()">Add Contact</a>
+  <table class="listtable">
+    <tr><th ng-hide="true">S.NO.</th><th class="hidden-xs" colspan="2">First Name</th><th colspan="2">Last Name</th><th colspan="4">Email</th><th class="hidden-xs" colspan="2">#Phone</th><th class="hidden-xs" colspan="2">Status</th><th colspan="2">Action</th></tr>
+    <tr ng-repeat="contact in contacts track by contact.id ">
+      <td ng-hide="true">{{contact.id}}</td>
+      <td class="hidden-xs" colspan="2">{{contact.FirstName}}</td>
+      <td colspan="2">{{contact.LastName}}</td>
+      <td colspan="4">{{contact.Email}}</td>
+      <td class="hidden-xs" colspan="2">{{contact.PhoneNumber}}</td>
+      <td class="hidden-xs" colspan="2">{{contact.Status}}</td>
+      <td colspan="2"><a ng-click="editContact(contact)"><span class="glyphicon glyphicon-pencil"></span></a><a ng-click="deletecontact(contact)"><span class="glyphicon glyphicon-remove-sign"></span></a></td>
+    </tr>
+  </table
+
+</div>

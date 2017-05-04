@@ -1,0 +1,23 @@
+.listtable{
+  width:100%;
+}
+.listtable tr td,.listtable tr th{
+  padding:10px;
+}
+.glyphicon-pencil{
+  color:blue;
+  font-size: 15px;
+  padding:0 5px;
+}
+.glyphicon-remove-sign{
+  color:red;
+  font-size: 20px;
+  padding:0 5px;
+}
+.form-group-itm{
+  padding: 30px 50px;
+
+}
+.errormsg{
+  color:maroon;
+}

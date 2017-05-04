@@ -1,0 +1,68 @@
+<h2>Add Contact</h2>
+<form class="form" name="cform" novalidate="true">
+<div class="form-group-itm">
+<div class="form-group">
+        <label class="col-sm-2 control-label" for="firstName">First Name:</label>
+        <div class="col-sm-8">
+            <input type="text" name="firstName" class="form-control" ng-model="contact.FirstName" required ng-minlength="3" ng-maxlength="25" id="form-group-input" placeholder="first name">
+            <div class="errormsg" ng-messages="cform.firstName.$error" role="alert">
+              <div ng-if="cform.firstName.$error.required" ng-message="required">*This is a required field</div>
+              <div ng-if="cform.firstName.$error.minlength" ng-message="minlength">*Minimum Length is 3</div>
+              <div ng-if="cform.firstName.$error.maxlength" ng-message="maxlength">*Maximum Length is 25</div>
+            </div>
+        </div>
+</div>
+</div>
+<div class="form-group-itm">
+<div class="form-group">
+        <label class="col-sm-2 control-label" for="lastName">Last Name:</label>
+        <div class="col-sm-8">
+            <input type="text" name="lastName" class="form-control" ng-minlength="3" ng-maxlength="25" ng-model="contact.LastName" required id="form-group-input" placeholder="last name">
+            <div class="errormsg" ng-messages="cform.lastName.$error" role="alert">
+              <div ng-if="cform.lastName.$error.required" ng-message="required">*This is a required field</div>
+              <div ng-if="cform.lastName.$error.minlength" ng-message="minlength">*Minimum Length is 3</div>
+              <div ng-if="cform.lastName.$error.maxlength" ng-message="maxlength">*Maximum Length is 25</div>
+            </div>
+        </div>
+</div>
+</div>
+<div class="form-group-itm">
+<div class="form-group">
+        <label class="col-sm-2 control-label" for="emailid">Email:</label>
+        <div class="col-sm-8">
+            <input type="text" name="emailid" class="form-control" ng-model="contact.Email" required ng-pattern="mailpattern"  id="form-group-input" placeholder="@abc.com">
+            <div class="errormsg" ng-messages="cform.emailid.$error" role="alert">
+              <div ng-if="cform.emailid.$error.required" ng-message="required">*This is a required field</div>
+              <div ng-if="cform.emailid.$error.pattern" ng-message="pattern">*Provide a valid Email ID</div>
+            </div>
+        </div>
+</div>
+</div>
+<div class="form-group-itm">
+<div class="form-group">
+        <label class="col-sm-2 control-label" for="phone">My label</label>
+        <div class="col-sm-8">
+            <input type="tel" name="phone" class="form-control" ng-model="contact.PhoneNumber" ng-pattern="mobileregex" required id="form-group-input" placeholder="(xxx) xxx xxxx">
+            <div class="errormsg" ng-messages="cform.phone.$error" role="alert">
+              <div ng-if="cform.phone.$error.required" ng-message="required">*This is a required field</div>
+              <div ng-if="cform.phone.$error.pattern" ng-message="pattern">*Mobile Number is not in (xxx) xxx xxxx format</div>
+            </div>
+        </div>
+</div>
+</div>
+<div class="form-group-itm">
+<div class="form-group">
+        <label class="col-sm-2 control-label" for="status">My label</label>
+        <div class="col-sm-8">
+          <select name="status" ng-model="contact.Status" required ><option selected value="Active">Active</option>
+            <option value="Inactive">Inactive</option></select>
+            <div class="errormsg" ng-messages="cform.status.$error" role="alert">
+              <div ng-if="cform.status.$error.required" ng-message="required">*This is a required field</div>
+            </div>
+        </div>
+</div>
+</div>
+
+<div><button type="submit" ng-disabled="cform.$invalid" class="btn btn-md btn-primary" ng-click="addContact(contact)">Submit</button></div>
+
+</form>
