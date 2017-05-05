@@ -24,6 +24,7 @@ angular.module('evolventSampleApp')
     $scope.deletecontact = function(deleteid){
       dataService.deletecontact(deleteid.id)
       .then(function(result){
+
       },function(err){
 
       });

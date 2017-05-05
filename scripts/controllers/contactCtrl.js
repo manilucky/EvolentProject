@@ -30,6 +30,8 @@ angular.module('evolventSampleApp')
     };
     if($scope.editdata!="null"){
               dataService.editcontacts(data).then(function(result){
+                debugger;
+                console.log(result);
                 if(result.status==200){
                   $location.path("/");
                 }
